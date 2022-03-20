@@ -236,14 +236,10 @@ class _RecorderState extends State<RecorderPage> {
                 child: Text(_mPlayer!.isPlaying ? 'Stop' : 'Play'),
               ),
               const SizedBox(width: 20),
-              Text(_mPlayer!.isPlaying
-                  ? 'Playback in progress'
-                  : 'Player is stopped'),
+              Text(_mPlayer!.isPlaying? 'Playback in progress': 'Player is stopped'),
             ]),
           ),
-          const SizedBox(
-            height: 20,
-          ),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: uploadToDropBox,
             style: ElevatedButton.styleFrom(primary: Colors.green),
@@ -255,10 +251,7 @@ class _RecorderState extends State<RecorderPage> {
 
     return Scaffold(
       backgroundColor: Colors.blue,
-      appBar: AppBar(
-        title: const Center(
-          child: Text('DropBox Recorder'),
-        ),
+      appBar: AppBar(title: const Center(child: Text('DropBox Recorder'),),
       ),
       body: makeBody(),
     );
