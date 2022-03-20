@@ -24,7 +24,6 @@ class RecorderPage extends StatefulWidget {
 
 class _RecorderState extends State<RecorderPage> {
   String? accessToken;
-  bool showInstruction = false;
   final Codec _codec = Codec.aacMP4;
   final String _mPath = 'tau_file.mp4';
   FlutterSoundPlayer? _mPlayer = FlutterSoundPlayer();
@@ -32,7 +31,6 @@ class _RecorderState extends State<RecorderPage> {
   bool _mPlayerIsInited = false;
   bool _mRecorderIsInited = false;
   bool _mplaybackReady = false;
-  String globalPath = '';
 
   Future initDropbox() async {
     await Dropbox.init(dropboxClientId, dropboxKey, dropboxSecret);
